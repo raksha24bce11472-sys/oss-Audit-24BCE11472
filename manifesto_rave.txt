@@ -1,0 +1,3 @@
+Open Source Manifesto - 31 March 2026
+----------------------------------------
+I use Git feature/command 'Readme' regularly because it helps me work in an open, trackable, and collaborative way. To me, freedom means 'salvation', because open source gives people the right to study, modify, and share software. Using Git, I would like to build and openly share 'gazebo' so that others can learn from it, improve it, and contribute back to the community.
