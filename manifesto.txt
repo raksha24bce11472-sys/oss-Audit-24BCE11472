@@ -1,0 +1,60 @@
+OSS AUDIT PROJECT — MANIFESTO
+==============================
+Student ID: 24BCE11472
+Project: Vityarthi OSS Audit
+
+----------------------------------------------------------------------
+MISSION
+----------------------------------------------------------------------
+Our mission is to promote transparency, security, and compliance in
+open-source software by providing simple, reproducible tools that help
+developers and auditors inspect software projects systematically.
+
+----------------------------------------------------------------------
+PRINCIPLES
+----------------------------------------------------------------------
+1. TRANSPARENCY
+   Every audit step must be visible, logged, and reproducible.
+   No hidden operations. All scripts are human-readable.
+
+2. SIMPLICITY
+   Tools should be easy to run with minimal dependencies.
+   A single shell environment should be sufficient.
+
+3. ACCURACY
+   Reports must reflect the true state of the audited project.
+   False positives should be minimized; false negatives must be flagged.
+
+4. OPEN SOURCE
+   All tools and scripts in this project are open-source.
+   Contributions, reviews, and forks are welcome.
+
+5. SECURITY FIRST
+   Known vulnerabilities in dependencies must always be reported,
+   never suppressed or ignored for convenience.
+
+6. LICENSE COMPLIANCE
+   Every open-source component used in a project carries a license.
+   Auditors must identify and respect those licenses.
+
+7. CONTINUOUS IMPROVEMENT
+   Audit scripts are living documents. They must be updated as new
+   threats, licenses, and best practices emerge.
+
+----------------------------------------------------------------------
+GOALS
+----------------------------------------------------------------------
+- Automate the discovery of project dependencies.
+- Flag dependencies with known CVEs (Common Vulnerabilities & Exposures).
+- Identify license types and highlight potential incompatibilities.
+- Generate clear, actionable audit reports for developers.
+- Educate developers on the importance of supply-chain security.
+
+----------------------------------------------------------------------
+COMMITMENT
+----------------------------------------------------------------------
+This project is committed to the values of the open-source community.
+We believe that better tools lead to better software, and better
+software makes the world safer and more connected.
+
+----------------------------------------------------------------------

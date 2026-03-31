@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# build — Master build and orchestration script for OSS Audit Project
+# Student ID: 24BCE11472
+
+set -euo pipefail
+
+SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_FILE="$SCRIPTS_DIR/audit.log"
+
+echo "============================================="
+echo "  OSS Audit Project — Build Script"
+echo "  Student ID: 24BCE11472"
+echo "============================================="
+echo ""
+
+# Make all scripts executable
+echo "[build] Setting executable permissions on all scripts..."
+chmod +x "$SCRIPTS_DIR"/script*.sh
+
+echo "[build] Starting OSS audit pipeline..."
+echo "[build] Log file: $LOG_FILE"
+echo ""
+
+run_step() {
+    local step_num="$1"
+    local script="$2"
+    local description="$3"
+
+    echo "---------------------------------------------"
+    echo "[Step $step_num] $description"
+    echo "---------------------------------------------"
+    if bash "$SCRIPTS_DIR/$script" 2>&1 | tee -a "$LOG_FILE"; then
+        echo "[Step $step_num] PASSED"
+    else
+        echo "[Step $step_num] FAILED — check $LOG_FILE for details"
+        exit 1
+    fi
+    echo ""
+}
+
+# Clear previous log
+> "$LOG_FILE"
+echo "[build] Log started at $(date)" >> "$LOG_FILE"
+
+run_step 1 "script1.sh" "Environment Setup"
+run_step 2 "script2.sh" "Dependency Audit"
+run_step 3 "script3.sh" "License Check"
+run_step 4 "script4.sh" "Security Vulnerability Scan"
+run_step 5 "script5.sh" "Report Generation"
+
+echo "============================================="
+echo "[build] All steps completed successfully."
+echo "[build] Full log available at: $LOG_FILE"
+echo "============================================="
