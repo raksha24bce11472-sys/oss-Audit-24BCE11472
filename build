@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 24BCE11472 – OSS NGMC Capstone Project
+# build – Setup script for the OSS Audit toolkit
+#
+# Usage: ./build
+
+set -euo pipefail
+
+SCRIPTS=(script1.sh script2.sh script3.sh script4.sh script5.sh)
+
+echo "============================================="
+echo "  OSS Audit Toolkit – Build / Setup"
+echo "============================================="
+echo ""
+
+# Make all audit scripts executable
+echo "[1/3] Setting execute permissions on audit scripts..."
+for s in "${SCRIPTS[@]}"; do
+    if [[ -f "$s" ]]; then
+        chmod +x "$s"
+        echo "      ✔  $s"
+    else
+        echo "      ✘  $s not found – skipping"
+    fi
+done
+echo ""
+
+# Verify required tools
+echo "[2/3] Checking required tools..."
+REQUIRED_TOOLS=(bash git grep awk sed find)
+ALL_OK=true
+for tool in "${REQUIRED_TOOLS[@]}"; do
+    if command -v "$tool" &>/dev/null; then
+        echo "      ✔  $tool"
+    else
+        echo "      ✘  $tool is NOT available"
+        ALL_OK=false
+    fi
+done
+echo ""
+
+if [[ "$ALL_OK" == false ]]; then
+    echo "[WARNING] Some required tools are missing. Audit results may be incomplete."
+    echo ""
+fi
+
+# Print usage summary
+echo "[3/3] Setup complete. Run each audit script like this:"
+echo ""
+echo "      ./script1.sh [path-to-project]   # License Audit"
+echo "      ./script2.sh [path-to-project]   # Dependency Audit"
+echo "      ./script3.sh [path-to-project]   # Security Audit"
+echo "      ./script4.sh [path-to-project]   # Documentation Audit"
+echo "      ./script5.sh [path-to-project]   # Code Quality Audit"
+echo ""
+echo "  If no path is provided, the current directory is audited."
+echo ""
+echo "============================================="
+echo "  Build finished successfully."
+echo "============================================="

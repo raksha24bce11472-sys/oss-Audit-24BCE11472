@@ -1,0 +1,75 @@
+========================================
+  THE OPEN SOURCE AUDIT – MANIFESTO
+  OSS NGMC Capstone Project | 24BCE11472
+========================================
+
+Open source software is the backbone of modern technology. Millions of applications
+depend on freely shared code written and maintained by communities around the world.
+With that freedom comes responsibility.
+
+This manifesto outlines the principles that guide the Open Source Audit toolkit.
+
+----------------------------------------
+PRINCIPLE 1: TRANSPARENCY
+----------------------------------------
+Every dependency, every license, every line of code that enters a project should be
+visible and understandable. Hidden dependencies and unread licenses are a form of
+technical debt that compounds over time. An audit must shine a light into every
+corner of a codebase.
+
+----------------------------------------
+PRINCIPLE 2: ACCOUNTABILITY
+----------------------------------------
+Maintainers are accountable not only to their users but to the broader open-source
+ecosystem. Auditing is not a blame exercise – it is a tool for improvement. When
+issues are found, they must be documented clearly and resolved promptly.
+
+----------------------------------------
+PRINCIPLE 3: SECURITY FIRST
+----------------------------------------
+Security vulnerabilities in open-source code can affect millions of users overnight.
+The audit process must treat security findings with the highest priority. No feature
+is worth shipping if it introduces a known vulnerability.
+
+----------------------------------------
+PRINCIPLE 4: LICENSE COMPLIANCE
+----------------------------------------
+Open-source licenses represent a social contract between creators and users. Respecting
+those licenses is both a legal obligation and an ethical one. Every project must carry
+a clear license, and every dependency license must be compatible with the project's own.
+
+----------------------------------------
+PRINCIPLE 5: DOCUMENTATION AS A FIRST-CLASS CITIZEN
+----------------------------------------
+Code without documentation is a gift without instructions. A project that cannot be
+understood, deployed, or contributed to is a project that will eventually be abandoned.
+Good documentation multiplies the value of good code.
+
+----------------------------------------
+PRINCIPLE 6: CONTINUOUS IMPROVEMENT
+----------------------------------------
+An audit is not a one-time event. It is a continuous process embedded in the development
+lifecycle. Every commit, every release, and every new dependency is an opportunity to
+reassess and improve the health of a project.
+
+----------------------------------------
+PRINCIPLE 7: COMMUNITY RESPECT
+----------------------------------------
+Open-source projects are built by people who donate their time and expertise. Auditing
+a project is an act of engagement with that community. Findings should be reported
+respectfully, with context and constructive suggestions, never as attacks.
+
+----------------------------------------
+
+"Given enough eyeballs, all bugs are shallow."
+  – Linus's Law (Eric S. Raymond, "The Cathedral and the Bazaar", 1999)
+
+"Software is like entropy: it is difficult to grasp, weighs nothing,
+ and obeys the second law of thermodynamics; i.e., it always increases."
+  – Norman Augustine
+
+----------------------------------------
+Student ID : 24BCE11472
+Course     : OSS NGMC
+Project    : The Open Source Audit
+========================================
